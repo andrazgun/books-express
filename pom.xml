@@ -12,6 +12,31 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <cucumber.version>7.20.1</cucumber.version>
+        <webdriver.manager.version>5.9.2</webdriver.manager.version>
     </properties>
+    <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-java</artifactId>
+        <version>4.27.0</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+    <dependency>
+        <groupId>io.github.bonigarcia</groupId>
+        <artifactId>webdrivermanager</artifactId>
+        <version>${webdriver.manager.version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-java</artifactId>
+        <version>${cucumber.version}</version>
+    </dependency>
+    </dependencies>
+
+
+
 
 </project>
