@@ -27,12 +27,12 @@ Feature: Homepage: Go to account
     Then 'Register' button is displayed
     When Customer clicks 'Register new account' button
     Then 'Register' page opens
-    When Customer register with
-    |Email| email@email.com|
-    | FirstName        | firstName       |
-    | LastName         | lastName        |
-    | Pasword          | Test1234        |
-    | Confirm Password | ConfirmPassword |
+    When Customer register with details
+      | Email            | email@email.com |
+      | FirstName        | firstName       |
+      | LastName         | lastName        |
+      | Pasword          | Test1234        |
+      | Confirm Password | ConfirmPassword |
     And Customer clicks 'Register' button
     Then 'MyAccount' page opens
 
