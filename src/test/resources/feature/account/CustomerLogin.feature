@@ -1,13 +1,39 @@
-Feature: Account: Login
-Scenario: Customer tries to log in with invalid password on Login page
-  Given Customer registers
-  When Customer opens Welcome page
-  And Customer clicks 'Intra in cont'
-  Then Login page is opened
-  And All required elements for Login page are displayed
-  When Customer submits email "andreigunta@yahoo.com"
-  And Customer clicks Email button on Login page
-  Then Password field is displayed on Login page
-  When Customer submits password "xxx"
-  And Customer clicks Password button on Login page
-  Then "<passwordMsg>" error message is displayed for password field on Login page
+Feature: Homepage: Go to account
+
+  Scenario Outline: Customer goes to account page
+    Given Customer is on Homepage
+    When Customer hover over 'Account' drop menu
+    Then 'Login' button is displayed
+    When Customer clicks 'login' button
+    Then 'Login' page opens
+    When Customer login with username <username> and password <password>
+    And Customer clicks 'login' button
+    Then 'MyAccount' page opens
+
+    Examples:
+      | username              | password   |
+      | 'agtest1@yopmail.com' | 'Test1234' |
+
+  Scenario: Customer wishlist
+    Given Customer is on Homepage
+    When Customer hover over 'Wishlist' drop menu
+    Then 'Wishlist' button is displayed
+    When Customer clicks 'Wishlist' button
+    Then 'Login' page opens
+
+  Scenario: Customer register
+    Given Customer is on Homepage
+    When Customer hover over 'Account' drop menu
+    Then 'Register' button is displayed
+    When Customer clicks 'Register new account' button
+    Then 'Register' page opens
+    When Customer register with
+    |Email| email@email.com|
+    | FirstName        | firstName       |
+    | LastName         | lastName        |
+    | Pasword          | Test1234        |
+    | Confirm Password | ConfirmPassword |
+    And Customer clicks 'Register' button
+    Then 'MyAccount' page opens
+
+    

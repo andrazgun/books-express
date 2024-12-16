@@ -1,4 +1,4 @@
-package page.account;
+package pages;
 
 public interface LoginPage {
 

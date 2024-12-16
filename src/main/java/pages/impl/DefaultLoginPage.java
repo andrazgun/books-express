@@ -1,7 +1,6 @@
-package page.account.impl;
+package pages.impl;
 
-import org.openqa.selenium.support.FindBy;
-import page.account.LoginPage;
+import pages.LoginPage;
 
 public class DefaultLoginPage implements LoginPage {
 
@@ -9,8 +8,8 @@ public class DefaultLoginPage implements LoginPage {
     private static final String URL_PAGE = "login";
 
 
-    @FindBy(css = "[id='email-button']")
-    protected Button loginButton;
+//    @FindBy(css = "[id='email-button']")
+//    protected Button loginButton;
 
     @Override
     public void clickLoginButton() {

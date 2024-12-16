@@ -1,6 +1,6 @@
-package page.account.impl;
+package pages.impl;
 
-import page.account.RegistrationPage;
+import pages.RegistrationPage;
 
 public class DefaultRegistrationPage implements RegistrationPage {
     @Override
