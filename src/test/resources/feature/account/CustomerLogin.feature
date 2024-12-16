@@ -6,7 +6,7 @@ Feature: Homepage: Go to account
     Then 'Login' button is displayed
     When Customer clicks 'login' button
     Then 'Login' page opens
-    When Customer login with username <username> and password <password>
+    When Customer login with username "<username>" and password "<password>"
     And Customer clicks 'login' button
     Then 'MyAccount' page opens
 
@@ -14,6 +14,7 @@ Feature: Homepage: Go to account
       | username              | password   |
       | 'agtest1@yopmail.com' | 'Test1234' |
 
+  @Regression
   Scenario: Customer wishlist
     Given Customer is on Homepage
     When Customer hover over 'Wishlist' drop menu
@@ -21,7 +22,8 @@ Feature: Homepage: Go to account
     When Customer clicks 'Wishlist' button
     Then 'Login' page opens
 
-  Scenario: Customer register
+  @Smoke
+  Scenario: New account registration
     Given Customer is on Homepage
     When Customer hover over 'Account' drop menu
     Then 'Register' button is displayed
@@ -31,9 +33,22 @@ Feature: Homepage: Go to account
       | Email            | email@email.com |
       | FirstName        | firstName       |
       | LastName         | lastName        |
-      | Pasword          | Test1234        |
+      | Password         | Test1234        |
       | Confirm Password | ConfirmPassword |
     And Customer clicks 'Register' button
     Then 'MyAccount' page opens
 
-    
+  Scenario: Account login with background
+    Given Customer is on Homepage
+    When Customer hover over 'Account' drop menu
+    Then 'Login' button is displayed
+    When Customer clicks 'Login' button
+    Then 'Login' page opens
+    When Customer register with details
+      | Email            | email@email.com |
+      | FirstName        | firstName       |
+      | LastName         | lastName        |
+      | Password         | Test1234        |
+      | Confirm Password | ConfirmPassword |
+    And Customer clicks 'Register' button
+    Then 'MyAccount' page opens
