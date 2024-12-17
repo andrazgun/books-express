@@ -3,13 +3,17 @@ package stepdef;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.testng.Assert;
 import pages.HomePage;
 
 public class HomepageStepdefs {
 
-    @Given("Customer is on Homepage")
-    public void customerIsOnHomepage() {
-//        homePage.openPage();
+    private HomePage homePage;
+
+
+    @Given("^Customer opens Homepage$")
+    public void customerOpensHomepage() {
+        homePage.openPage();
         System.out.println("The customer is on the Homepage");
 
     }
