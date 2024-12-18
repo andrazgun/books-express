@@ -15,7 +15,7 @@
         <selenium.java.version>4.27.0</selenium.java.version>
         <testng.version>7.10.2</testng.version>
         <assertj.version>3.26.3</assertj.version>
-        <spring.beans.version>6.2.1</spring.beans.version>
+        <spring.version>6.2.1</spring.version>
     </properties>
     <dependencies>
         <dependency>
@@ -53,7 +53,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
-            <version>${spring.beans.version}</version>
+            <version>${spring.version}</version>
         </dependency>
 
     </dependencies>
